@@ -17,5 +17,6 @@ The goal is to develop a Space Exploration app  “Aurore” that captivates spa
 
 ## Daily Tasks: 
 1. Initialising the project with the README file.
+2. Creating the Backend for the application.
 
 
