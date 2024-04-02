@@ -17,6 +17,10 @@ The goal is to develop a Space Exploration app  “Aurore” that captivates spa
 
 ## Daily Tasks: 
 1. Initialising the project with the README file.
-2. Creating the Backend for the application.
+2. Creating the Frontend and Backend for the application.
+3. Deploying the Backend and Frontend.
 
 
+## Deployed Links:
+1. Frontend - https://aurore-brt.pages.dev/
+2. Backend - https://aurore-uxjq.onrender.com
