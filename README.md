@@ -19,6 +19,7 @@ The goal is to develop a Space Exploration app  “Aurore” that captivates spa
 1. Initialising the project with the README file.
 2. Creating the Frontend and Backend for the application.
 3. Deploying the Backend and Frontend.
+4. Creating Landing Page
 
 
 ## Deployed Links:
