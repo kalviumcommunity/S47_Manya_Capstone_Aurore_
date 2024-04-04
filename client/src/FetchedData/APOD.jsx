@@ -11,7 +11,7 @@ useEffect(()=>{
 
         try{
             const response = await fetch(apiUrl);
-            const data = await response.json();
+            const data = await response.json(); 
             setdata(data);
         }catch(error){
             console.error("Error fetchinng data",error);
