@@ -4,6 +4,8 @@ import LandingPage from "./Pages/LandingPage";
 import SignUpForm from "./Pages/SignUp";
 import LoginForm from "./Pages/Login";
 import APOD from "./FetchedData/APOD";
+import MarsRover from "./FetchedData/MarsRover";
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
         <Route path="/signup" element={<SignUpForm />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/apod" element={<APOD />}></Route>
+        <Route path="/mars-rover" element={<MarsRover/>}></Route>
       </Routes>
     </>
   );
