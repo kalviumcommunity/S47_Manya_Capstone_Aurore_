@@ -5,6 +5,7 @@ import SignUpForm from "./Pages/SignUp";
 import LoginForm from "./Pages/Login";
 import APOD from "./FetchedData/APOD";
 import MarsRover from "./FetchedData/MarsRover";
+import ISROLaunches from "./FetchedData/ISROLaunches";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/apod" element={<APOD />}></Route>
         <Route path="/mars-rover" element={<MarsRover/>}></Route>
+        <Route path="/isro-launches" element={<ISROLaunches/>}></Route>
       </Routes>
     </>
   );
