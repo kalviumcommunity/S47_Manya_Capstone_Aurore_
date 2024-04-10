@@ -6,7 +6,7 @@ import LoginForm from "./Pages/Login";
 import APOD from "./FetchedData/APOD";
 import MarsRover from "./FetchedData/MarsRover";
 import ISROLaunches from "./FetchedData/ISROLaunches";
-
+import Articles from "./FetchedData/Articles";
 
 function App() {
   return (
@@ -18,6 +18,8 @@ function App() {
         <Route path="/apod" element={<APOD />}></Route>
         <Route path="/mars-rover" element={<MarsRover/>}></Route>
         <Route path="/isro-launches" element={<ISROLaunches/>}></Route>
+        <Route path="/articles" element={<Articles />}/>
+
       </Routes>
     </>
   );
