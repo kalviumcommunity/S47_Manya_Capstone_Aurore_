@@ -7,6 +7,7 @@ import APOD from "./FetchedData/APOD";
 import MarsRover from "./FetchedData/MarsRover";
 import ISROLaunches from "./FetchedData/ISROLaunches";
 import Articles from "./FetchedData/Articles";
+import Blogs from "./FetchedData/Blogs";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/mars-rover" element={<MarsRover/>}></Route>
         <Route path="/isro-launches" element={<ISROLaunches/>}></Route>
         <Route path="/articles" element={<Articles />}/>
+        <Route path="/blogs" element={<Blogs />}/>
 
       </Routes>
     </>
