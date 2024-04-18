@@ -1,10 +1,11 @@
 import React from 'react';
 import '../Styles/Login.css';
-import { FaUser } from "react-icons/fa";
-import { FaLock } from "react-icons/fa";
 import { Link } from 'react-router-dom'; 
 
 function LoginForm() {
+  const loginwithgoogle = () => {
+    window.open("http://localhost:5000/auth/google/callback","_self")
+  }
   return (
     <div className="loginPage">
     <div className="wrapper">
@@ -16,7 +17,7 @@ function LoginForm() {
             placeholder="Username"
             required
           />
-          <i>  <FaUser /></i>
+          <i className='bx bxs-user'></i>
         </div>
         <div className="input-box">
           <input
@@ -24,7 +25,7 @@ function LoginForm() {
             placeholder="Password"
             required
           />
-          <i> <FaLock /></i>
+          <i className='bx bxs-lock-alt'></i>
         </div>
         <div className="remember-forgot">
           <label>
@@ -40,7 +41,7 @@ function LoginForm() {
           <p>Don't have an account? <Link to={"/signup"}>Sign Up</Link></p>
         </div>
       </form>
-      <button className='login-with-google-btn'>
+      <button className='login-with-google-btn' onClick={loginwithgoogle}>
             Log in with Google
           </button>
     </div>
