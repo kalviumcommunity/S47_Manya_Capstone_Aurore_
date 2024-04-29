@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/LandingPage.css";
+import "../../Styles/LandingPage.css";
 import { FaPinterest } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
