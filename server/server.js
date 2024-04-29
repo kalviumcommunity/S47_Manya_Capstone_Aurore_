@@ -8,18 +8,29 @@ const PORT = process.env.PORT || 5000;
 const session = require("express-session");
 const passport = require("passport");
 const OAuth2Strategy = require("passport-google-oauth2").Strategy;
-const userdb = require("./Schemas/userGoogleSchema");
-const historyRoutes = require("./Routes/historyRoutes");
+const userdb = require("./models/userGoogleSchema.js");
+const historyRoutes = require("./Routes/historyRoutes.js")
+const userRoutes = require("./Routes/userRoutes.js")
+// const MyPosts = require("./Routes/multer.js")
 
 const clientId = process.env.CLIENTID;
 const clientsecret = process.env.CLIENTSECRET;
 
-//Routes
-app.use("/history", historyRoutes);
+//CORS Policy
+app.use(cors())
 
-app.get("/", (req, res) => {
-  res.send("Hello there, Welcome to Aurore! 🚀✨");
-});
+app.use(express.json());
+
+
+//Routes
+app.use("/history",historyRoutes)
+app.use("/api/user",userRoutes)
+// app.use("/posts",MyPosts)
+
+app.get("/", async (req, res) => {
+  res.send("Server is up and running");
+})
+
 
 app.use(
   cors({
@@ -29,7 +40,7 @@ app.use(
   })
 );
 
-app.use(express.json());
+
 
 app.use(
   session({
@@ -47,10 +58,11 @@ passport.use(
     {
       clientID: clientId,
       clientSecret: clientsecret,
-      callbackURL: "/auth/google/callback",
+      callbackURL: "/auth/google/callback", 
       scope: ["profile", "email"],
     },
     async (accessToken, refreshToken, profile, done) => {
+      console.log("profile",profile);
       try {
         let user = await userdb.findOne({ googleId: profile.id });
 

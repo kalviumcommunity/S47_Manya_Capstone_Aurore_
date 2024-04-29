@@ -4,7 +4,7 @@ const express = require("express");
 // const connectToDB = require("../DB/connection.js");
 // connectToDB();
 
-const history = require("../Schemas/history.schema");
+const history = require("../models/history.schema");
 const router = express.Router();
 
 // app.use(express.json());
