@@ -189,6 +189,12 @@ class userController {
       res.send({ status: "failed", message: "Invalid token" });
     }
   };
+
+
+  static userLogout = (req, res) => {
+    res.clearCookie("token"); // Clear the token cookie
+    res.send({ status: "success", msg: "Logged out successfully" });
+  };  
 }
 
 module.exports = userController;

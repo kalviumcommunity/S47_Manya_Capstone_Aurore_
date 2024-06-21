@@ -11,7 +11,7 @@ const OAuth2Strategy = require("passport-google-oauth2").Strategy;
 const userdb = require("./models/userGoogleSchema.js");
 const historyRoutes = require("./Routes/historyRoutes.js")
 const userRoutes = require("./Routes/userRoutes.js")
-// const MyPosts = require("./Routes/multer.js")
+const MyPosts = require("./Routes/multer.js")
 
 const clientId = process.env.CLIENTID;
 const clientsecret = process.env.CLIENTSECRET;
@@ -25,7 +25,7 @@ app.use(express.json());
 //Routes
 app.use("/history",historyRoutes)
 app.use("/api/user",userRoutes)
-// app.use("/posts",MyPosts)
+app.use("/posts",MyPosts)
 
 app.get("/", async (req, res) => {
   res.send("Server is up and running");
