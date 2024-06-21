@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
-import "../../Styles/CreatePost.css"
 import { useNavigate } from "react-router-dom";
 import  UserContext  from "../../Components/UserContext";
 
@@ -70,7 +69,7 @@ const CreatePost = () => {
   console.log(userDetails.email);
 
   return (
-    <div className="post-container">
+    <div className="container mt-3">
       <h1>Upload Your Image here</h1>
       <Form onSubmit={addUserData}>
         <Form.Group controlId="formName">
