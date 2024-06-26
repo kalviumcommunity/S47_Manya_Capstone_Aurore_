@@ -74,15 +74,6 @@ function UserPosts() {
     }
   });
 
-//   const filteredPosts = data.filter((post) => {
-//     if (filteredUser === "All") {
-//         return true;
-//     } else {
-//         return post.userId === userDetails._id; // Assuming userDetails contains the user's ID (_id)
-//     }
-// });
-
-
   console.log(userDetails.email);
 
   return (
